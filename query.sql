@@ -1,3 +1,4 @@
+-- note that stock_data should be the name of your table from database 
 SELECT upper(db1.Name) AS Name, round(db1.High,2) AS High, db1.Hour as Hour, ts AS Timestamp 
 FROM (
   SELECT name AS Name, max(high) AS High, substring(ts,12,2) AS Hour
